@@ -1,0 +1,42 @@
+{
+	"name": "codeagent/treemap",
+	"type": "library",
+	"description": "Builds an hierarchical structures (like file system) into treemap form",
+	"license": "MIT",
+	"keywords": [
+		"tree",
+		"treemap"
+	],
+	"authors": [
+		{
+			"name": "Alex",
+			"email": "i.aleksey.yakovlev@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"codeagent\\treemap\\": "src/",
+			"codeagent\\treemap\\commands\\": "commands/"
+		},
+		"files": [
+			"src/helpers.php"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"codeagent\\treemap\\demo\\": "demo/"
+		}
+	},
+	"require": {
+		"php": ">=5.4.0",
+		"intervention/image": "^2.3",
+		"symfony/console": "^3.1"
+	},
+	"require-dev": {
+		"fzaninotto/faker": "^1.6"
+	},
+	"bin": ["bin/treemap"],
+	"scripts": {
+		"treemap": "php treemap"
+	}
+}

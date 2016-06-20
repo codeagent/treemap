@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+foreach ([__DIR__ . '/../../../autoload.php', __DIR__ . '/../../vendor/autoload.php'] as $file) {
+    if (file_exists($file)) {
+        include $file;
+        break;
+    }
+}
+
+use Symfony\Component\Console\Application;
+use codeagent\treemap\commands\AssetsCommand;
+
+$application = new Application();
+$application->add(new AssetsCommand());
+$application->run();

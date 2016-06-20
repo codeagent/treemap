@@ -1,0 +1,108 @@
+[id^="treemap"] {
+  color: #222;
+  font-family: Arial, Tahoma;
+  font-size: 13px;
+  background-color: transparent;
+  box-sizing: content-box;
+  position: relative;
+  font-weight: normal;
+  line-height: 20px;
+}
+[id^="treemap"] * {
+  box-sizing: content-box;
+}
+[id^="treemap"] div {
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 1;
+  font-size: 13px;
+}
+[id^="treemap"] a {
+  color: #222;
+  font-size: 14px;
+  vertical-align: middle;
+}
+[id^="nested-treemap"],
+[id^="nested-treemap"]:hover,
+[id^="nested-treemap"]:focus {
+  box-shadow: 0 0 0 2px transparent;
+  -moz-box-shadow: 0 0 0 2px transparent;
+  -webkit-box-shadow: 0 0 0 2px transparent;
+}
+[id^="nested-treemap"] [id^="treemap"] {
+  overflow: visible;
+  display: none;
+  position: relative;
+  box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+}
+[id^="nested-treemap"] [id^="treemap"]:last-child {
+  display: block;
+  z-index: 9;
+}
+[id^="nested-treemap"] [id^="treemap"] [id^="treemap"] {
+  box-shadow: 0 0 0 2px transparent;
+  -moz-box-shadow: 0 0 0 2px transparent;
+  -webkit-box-shadow: 0 0 0 2px transparent;
+}
+[id^="nested-treemap"] nav {
+  padding: 0;
+  display: block;
+  margin: 5px 0;
+  font-weight: normal;
+  font-size: 13px;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Arial, Tahoma;
+}
+[id^="nested-treemap"] nav a {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  display: inline-block;
+  line-height: 22px;
+  height: 24px;
+  color: #222;
+  padding: 0 8px 0 16px;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  text-decoration: none;
+  background-color: #efefef;
+  box-sizing: border-box;
+}
+[id^="nested-treemap"] nav a:before,
+[id^="nested-treemap"] nav a:after {
+  position: absolute;
+  content: '';
+}
+[id^="nested-treemap"] nav a:after {
+  border-left: 7px solid #aaa;
+  border-top: 12px solid transparent;
+  border-right: none;
+  border-bottom: 12px solid transparent;
+  width: 0;
+  height: 0;
+  top: -1px;
+  right: -7px;
+  z-index: 1;
+}
+[id^="nested-treemap"] nav a:before {
+  border-left: 7px solid #efefef;
+  border-top: 12px solid transparent;
+  border-right: none;
+  border-bottom: 12px solid transparent;
+  width: 0;
+  height: 0;
+  top: -1px;
+  right: -6px;
+  z-index: 2;
+}
+[id^="nested-treemap"] nav a:first-child {
+  padding-left: 8px;
+  border-left: 1px solid #aaa;
+}

@@ -1,0 +1,5 @@
+demo/ export-ignore
+commands/GenerateFakeCommand.php export-ignore
+commands/GenerateFilesystemCommand.php export-ignore
+/treemap export-ignore
+/.* export-ignore

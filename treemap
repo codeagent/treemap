@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+include __DIR__ . "/vendor/autoload.php";
+
+use Symfony\Component\Console\Application as ConsoleApplication;
+use codeagent\treemap\commands\GenerateFilesystemCommand as GenerateFilesystem;
+use codeagent\treemap\commands\GenerateFakeCommand as GenerateFake;
+
+$application = new ConsoleApplication();
+$application->add(new GenerateFilesystem());
+$application->add(new GenerateFake());
+$application->run();

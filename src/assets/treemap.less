@@ -1,0 +1,145 @@
+@name: 'treemap';
+@nested-name: 'nested-treemap';
+
+@font-family: Arial, Tahoma;
+@font-size-base: 13px;
+@font-size-large: 14px;
+@font-weight: normal;
+@font-color: #222;
+@link-color: @font-color;
+@line-height: 20px;
+
+@border-color: black;
+@border-width: 2px;
+@background-color: transparent;
+
+@nav-color: @font-color;
+@nav-height: 24px;
+@nav-margin: 5px 0;
+@nav-font-weight: normal;
+@nav-font-size: @font-size-base;
+@nav-border-color: #aaa;
+@nav-background-color: #efefef;
+@nav-link-padding: 8px;
+
+.arrow(@width, @height, @color) {
+  @half: @height / 2;
+  border-left: @width solid @color;
+  border-top: @half solid transparent;
+  border-right: none;
+  border-bottom: @half solid transparent;
+  width: 0;
+  height: 0;
+  top: -1px;
+}
+
+.sharp(@width, @height, @border-color, @background-color) {
+  &:before, &:after {
+    position: absolute;
+    content: '';
+  }
+  &:after {
+    .arrow(@width, @height, @border-color);
+    right: -@width;
+    z-index: 1;
+  }
+  &:before {
+    .arrow(@width, @height, @background-color);
+    right: -(@width - 1);
+    z-index: 2;
+  }
+}
+
+.border(@color, @width) {
+  box-shadow: 0 0 0 @width @color;
+  -moz-box-shadow: 0 0 0 @width @color;
+  -webkit-box-shadow: 0 0 0 @width @color;
+}
+
+[id^="@{name}"] {
+  color: @font-color;
+  font-family: @font-family;
+  font-size: @font-size-base;
+  background-color: @background-color;
+  box-sizing: content-box;
+  position: relative;
+  font-weight: @font-weight;
+  line-height: @line-height;
+  * {
+    box-sizing: content-box;
+  }
+
+  div {
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 1;
+    font-size: @font-size-base;
+  }
+
+  a {
+    color: @link-color;
+    font-size: @font-size-large;
+    vertical-align: middle;
+  }
+}
+
+[id^="@{nested-name}"] {
+  &, &:hover, &:focus {
+    .border(transparent, @border-width);
+  }
+
+  [id^="@{name}"] {
+    overflow: visible;
+    display: none;
+    position: relative;
+    .border(transparent, 0);
+
+    &:last-child {
+      display: block;
+      z-index: 9;
+    }
+
+    [id^="@{name}"] {
+      .border(transparent, @border-width);
+    }
+  }
+
+  nav {
+    padding: 0;
+    display: block;;
+    margin: @nav-margin;
+    font-weight: @nav-font-weight;
+    font-size: @nav-font-size;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: @font-family;
+
+    a {
+      .sharp(7px, @nav-height, @nav-border-color, @nav-background-color);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      position: relative;
+      display: inline-block;
+      line-height: (@nav-height - 2px);
+      height: @nav-height;
+      color: @nav-color;
+      padding: 0 @nav-link-padding 0 (2 * @nav-link-padding);
+      border-top: 1px solid @nav-border-color;
+      border-bottom: 1px solid @nav-border-color;
+      text-decoration: none;
+      background-color: @nav-background-color;
+      box-sizing: border-box;
+
+      &:first-child {
+        padding-left: @nav-link-padding;
+        border-left: 1px solid @nav-border-color;
+      }
+    }
+  }
+}
+
+

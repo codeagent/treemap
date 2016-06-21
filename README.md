@@ -2,7 +2,7 @@ Sometimes we need to convenient represent hierarchical data structures such as f
 One of the famous methods is a treemap. This **php package** provides you to build treemaps in formats of html, canvas and image from native php multiarrays. 
 Special architecture of classes gives you an opportunity for customization at level of one node: node content, node color and other.
 
-todo: [demo]
+See [demos](https://codeagent.github.io/treemap/).
 
 More info about treemaps you may see in [wiki](https://en.wikipedia.org/wiki/Treemapping). 
 

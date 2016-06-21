@@ -1,0 +1,21 @@
+{
+    "name": "codeagent/treemap-site",
+    "description": "Site about treemap php package",
+    "authors": [
+        {
+            "name": "Alex",
+            "email": "i.aleksey.yakovlev@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "codeagent/treemap": "^1.0",
+        "symfony/console": "^3.1",
+        "fzaninotto/faker": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "codeagent\\treemap\\site\\": "src/"
+        }
+    }
+}

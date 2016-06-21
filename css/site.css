@@ -1,0 +1,117 @@
+body {
+    min-height: 1200px;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+a {
+    color: #2390EA;
+}
+
+p {
+    margin: 15px auto;
+}
+
+.container {
+    width: 1170px;
+    max-width: none !important;
+}
+
+/* sidebar */
+.bs-docs-sidebar {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bs-docs-sidebar.fixed {
+    position: fixed;
+    top: 15px;
+}
+
+/* all links */
+.bs-docs-sidebar .nav>li>a {
+    color: #999;
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* nested links */
+.bs-docs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+/* active & hover links */
+.bs-docs-sidebar .nav>.active>a,
+.bs-docs-sidebar .nav>li>a:hover,
+.bs-docs-sidebar .nav>li>a:focus {
+    color: #2390EA;
+    text-decoration: none;
+    background-color: transparent;
+    border-left-color: #2390EA;
+}
+/* all active links */
+.bs-docs-sidebar .nav>.active>a,
+.bs-docs-sidebar .nav>.active:hover>a,
+.bs-docs-sidebar .nav>.active:focus>a {
+    font-weight: 700;
+}
+/* nested active links */
+.bs-docs-sidebar .nav .nav>.active>a,
+.bs-docs-sidebar .nav .nav>.active:hover>a,
+.bs-docs-sidebar .nav .nav>.active:focus>a {
+    font-weight: 500;
+}
+
+/* hide inactive nested list */
+.bs-docs-sidebar .nav ul.nav {
+    display: none;
+}
+/* show active nested list */
+.bs-docs-sidebar .nav>.active>ul.nav {
+    display: block;
+}
+
+/**/
+#brand {
+    color: white;
+    margin-top: -270px;
+    padding-bottom: 160px;
+    z-index:1000;
+    position: relative;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+#brand h1 {
+    font-size: 70px;
+}
+#brand h1 small {
+    display: block;
+    color: #eee;
+    font-size: 40px;
+}
+
+pre {
+    background: transparent;
+    border: none;
+    background: #f8f8f8 !important;
+}
+
+.container h2 {
+    margin-top: 40px;
+}
+
+.btn-primary.inverse {
+    background-color: transparent;
+    border-color: #2390EA;
+    color: #2390EA;
+ }
+.btn-primary.inverse:hover, .btn-primary.inverse:focus {
+    background-color: #2390EA;
+    color: white;
+}

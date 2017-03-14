@@ -10,7 +10,7 @@ More info about treemaps you may see in [wiki](https://en.wikipedia.org/wiki/Tre
 Install the latest version via composer:
 
 ```
-composer require codeagent\treemap
+composer require codeagent/treemap
 ```
 
 Also, it's necessary to plug in required css-styles to your page for correct display of html markup. 
